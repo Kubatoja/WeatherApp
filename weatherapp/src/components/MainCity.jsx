@@ -22,7 +22,7 @@ function MainCity() {
   const [adding, setAdding] = useState(false); //adding boolean
 
   const api = {
-    base: "http://api.weatherapi.com/v1",
+    base: "https://api.weatherapi.com/v1",
     key: "4d3650d6e2784fcb92b151553241706",
   };
 
