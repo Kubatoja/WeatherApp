@@ -1,0 +1,109 @@
+.status {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover .optionsBar .delete {
+    opacity: 1;
+  }
+  .optionsBar {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .delete {
+      font-size: 2.2vh;
+      opacity: 0;
+      position: relative;
+      top: 1vh;
+      right: 0.7vw;
+      transition: 0.5s;
+      color: red;
+      z-index: 3;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .container {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    top: -1vh;
+  }
+
+  .newStatus {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .chooseNewStatus {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      place-items: center;
+      .s {
+        font-size: 3.2vh !important;
+      }
+      .hpa {
+        font-size: 2vh !important;
+      }
+      .option {
+        font-size: 2.5vh;
+
+        transition: 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .newStatusBtn {
+      font-size: 5vh;
+      font-weight: bold;
+
+      transition: 0.5s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.statusSet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  width: 100%;
+  height: 100%;
+  .bigIcon {
+    font-size: 5vh;
+  }
+  .statusIcon {
+    font-size: 4vh;
+  }
+  .statusText {
+    font-size: 1.5vw;
+  }
+}

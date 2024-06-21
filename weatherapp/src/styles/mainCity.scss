@@ -1,0 +1,220 @@
+.mainCityPlaceholder {
+  width: 70vw;
+  height: 40vh;
+  border-radius: 0.5vh;
+  overflow: hidden;
+  background-color: #171717;
+  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .addBtn {
+    font-size: 10vw;
+  }
+  .addCity {
+    transition: 0.3s;
+
+    width: 70vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0000002c;
+    display: none;
+
+    .changeCity {
+      margin: 0;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+.mainCity {
+  width: 70vw;
+  height: 40vh;
+  border-radius: 0.5vh;
+  background-color: #171717;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  display: flex;
+  .options {
+    width: 3vh;
+    height: 3vh;
+    position: relative;
+    float: right;
+    top: 1.2vh;
+    right: 2vh;
+    font-size: 3vh;
+    transition: 0.5s;
+    z-index: 2;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.4);
+    }
+  }
+
+  .tools {
+    width: 70vw;
+    height: 40vh;
+    border-radius: 0.5vh;
+
+    background-color: rgba(0, 0, 0, 0.719);
+    opacity: 0;
+    position: absolute;
+    transition: 0.5s;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .cases {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .delete {
+        color: rgb(255, 36, 36);
+        z-index: 2;
+        font-size: 6vh;
+      }
+      .edit {
+        margin-right: 4vw;
+        margin-left: -5vw;
+        z-index: 2;
+        font-size: 6vh;
+        transition: 0.2s;
+      }
+      .isEdditing {
+        margin-left: 20vw;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        padding: 0.5vh 1vh;
+        font-size: 4vh;
+        &:hover {
+          transform: scale(1);
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+
+    div {
+      transition: 0.3s;
+    }
+    .delete:hover,
+    .edit:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+  .left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2vh 2vh 2vh 2vh;
+
+    .cityName {
+      font-size: 5vh;
+      font-weight: bold;
+      .time {
+        font-weight: normal;
+        font-size: 3vh;
+        font-family: "DM Mono", monospace;
+      }
+    }
+
+    .temp {
+      font-size: 7vh;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      .tempIcon {
+        width: 10vh;
+        height: 10vh;
+
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+
+    .rightInfo {
+      width: 12vw;
+      height: 15vh;
+      background-color: rgba(19, 19, 19, 0.7);
+      border-radius: 1vh;
+    }
+  }
+}
+.changeCity {
+  width: 20vw;
+  overflow: hidden;
+  height: 6vh;
+  border-radius: 0.1vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 5vw;
+  margin-right: -20vw;
+  z-index: 3;
+  display: flex;
+  transition: 0.2s;
+
+  .autofill {
+    transition: 0.2s;
+    width: 20vw;
+    height: 10vh;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 5.95vh;
+    cursor: pointer;
+    z-index: 2;
+    .suggestion {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1vh;
+      font-size: 1vw;
+    }
+    .suggestion:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  .searchIcon {
+    position: relative;
+    top: -0.2vh;
+    width: 3.2vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+  }
+  input[type="text"] {
+    width: 16vw;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2vh;
+    padding-left: 1vw;
+    &:focus {
+      outline: none;
+    }
+  }
+}

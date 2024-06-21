@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@100..900&display=swap");
+
+.app {
+  width: 80vw;
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #222222;
+  font-family: "Inter", sans-serif;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    height: 30vh;
+    color: black;
+
+    .secondCity,
+    .thirdCity {
+      width: 34vw;
+      height: 30vh;
+      background-color: #171717;
+      color: black;
+      border-radius: 0.5vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+
+      font-weight: bold;
+      font-size: 10vh;
+
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .secondCity:hover,
+    .thirdCity:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.req {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 10vh;
+
+  .search-box {
+    padding: 1vh;
+  }
+  .appBtn {
+    margin-left: 2vh;
+    width: 10vw;
+    height: 4vh;
+    background-color: white;
+    color: black;
+    text-align: center;
+    line-height: 4vh;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
