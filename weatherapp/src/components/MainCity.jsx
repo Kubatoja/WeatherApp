@@ -35,7 +35,6 @@ function MainCity() {
             return;
           }
           setWeather(result);
-          console.log(result);
         });
       }
     );
@@ -65,10 +64,6 @@ function MainCity() {
     }
   }
 
-  useEffect(() => {
-    searchMainCityWeather();
-    console.log(weather.current);
-  }, []);
   useEffect(() => {
     searchSuggestions();
     localStorage.setItem("city", searchMainCity);
@@ -119,7 +114,7 @@ function MainCity() {
             <div className="search">
               <input
                 type="text"
-                placeholder="Wpisz miasto"
+                placeholder="Search city"
                 onChange={(e) => {
                   setsearchMainCity(e.target.value);
                 }}
@@ -176,7 +171,7 @@ function MainCity() {
                 <div className="search">
                   <input
                     type="text"
-                    placeholder="Wpisz miasto"
+                    placeholder="Search city"
                     onChange={(e) => {
                       setsearchMainCity(e.target.value);
                     }}

@@ -17,29 +17,6 @@
     width: 70vw;
     height: 30vh;
     color: black;
-
-    .secondCity,
-    .thirdCity {
-      width: 34vw;
-      height: 30vh;
-      background-color: #171717;
-      color: black;
-      border-radius: 0.5vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-
-      font-weight: bold;
-      font-size: 10vh;
-
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .secondCity:hover,
-    .thirdCity:hover {
-      transform: scale(1.05);
-    }
   }
 }
 

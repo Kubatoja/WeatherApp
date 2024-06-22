@@ -16,7 +16,6 @@ function Status({ weather, id }) {
   useEffect(() => {
     localStorage.setItem(`status${id}`, status.toString());
     localStorage.setItem(`whatStatus${id}`, whatStatus.toString());
-    console.log(id);
   }, [whatStatus, status]);
   return (
     <div className="status">
@@ -126,22 +125,22 @@ function Status({ weather, id }) {
             </div>
             <div className="statusText" id="statusText">
               <div style={{ display: whatStatus == 0 ? "block" : "none" }}>
-                {weather.current.humidity}%
+                {weather.current ? `${weather.current.humidity}` : ""}%
               </div>
               <div style={{ display: whatStatus == 1 ? "block" : "none" }}>
-                {weather.current.wind_kph}km/h
+                {weather.current ? `${weather.current.wind_kph}` : ""}km/h
               </div>
               <div style={{ display: whatStatus == 2 ? "block" : "none" }}>
-                {weather.current.cloud}%
+                {weather.current ? `${weather.current.cloud}` : ""}%
               </div>
               <div style={{ display: whatStatus == 3 ? "block" : "none" }}>
-                {weather.current.pressure_mb}hPa
+                {weather.current ? `${weather.current.pressure_mb}` : ""}hPa
               </div>
               <div style={{ display: whatStatus == 4 ? "block" : "none" }}>
-                {weather.current.precip_mm}mm
+                {weather.current ? `${weather.current.precip_mm}` : ""}mm
               </div>
               <div style={{ display: whatStatus == 5 ? "block" : "none" }}>
-                {weather.current.vis_km}km
+                {weather.current ? `${weather.current.vis_km}` : ""}km
               </div>
             </div>
           </div>
