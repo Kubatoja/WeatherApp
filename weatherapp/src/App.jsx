@@ -4,8 +4,10 @@ import SecondaryCitites from "./components/SecondaryCitites";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [changeCity, setChangeCity] = useState("");
-  const [changeCity2, setChangeCity2] = useState("");
+  const [changeCity, setChangeCity] = useState(
+    localStorage.getItem("city") || "Katowice"
+  );
+  const [changeCity2, setChangeCity2] = useState("Katowice");
 
   return (
     <>
