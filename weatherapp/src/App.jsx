@@ -4,13 +4,24 @@ import SecondaryCitites from "./components/SecondaryCitites";
 import { useEffect, useState } from "react";
 
 function App() {
+  const [changeCity, setChangeCity] = useState("");
+  const [changeCity2, setChangeCity2] = useState("");
+
   return (
     <>
       <div className="app">
-        <MainCity />
+        <MainCity changeCity={changeCity} setChangeCity2={setChangeCity2} />
         <div className="container">
-          <SecondaryCitites id={1} />
-          <SecondaryCitites id={2} />
+          <SecondaryCitites
+            setChangeCity={setChangeCity}
+            changeCity2={changeCity2}
+            id={1}
+          />
+          <SecondaryCitites
+            setChangeCity={setChangeCity}
+            changeCity2={changeCity2}
+            id={2}
+          />
         </div>
       </div>
     </>

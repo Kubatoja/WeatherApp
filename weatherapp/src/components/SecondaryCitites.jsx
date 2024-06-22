@@ -11,7 +11,7 @@ import sunny from "../assets/sunny.jpg";
 import cloudy from "../assets/cloudy.jpg";
 import night from "../assets/night.jpg";
 
-function SecondaryCitites({ id }) {
+function SecondaryCitites({ id, setChangeCity, changeCity2 }) {
   const [addingCity, setAddingCity] = useState(
     +localStorage.getItem(`cityState${id}`) || 0
   );
@@ -176,7 +176,8 @@ function SecondaryCitites({ id }) {
             className="swap"
             onClick={() => {
               setOptions(false);
-              setMainCitySwap(searchSecondCity);
+              setChangeCity(searchSecondCity);
+              setsearchSecondCity(changeCity2);
             }}
           >
             <MdSwapVert />

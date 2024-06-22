@@ -10,7 +10,7 @@ import sunny from "../assets/sunny.jpg";
 import cloudy from "../assets/cloudy.jpg";
 import night from "../assets/night.jpg";
 
-function MainCity() {
+function MainCity({ changeCity, setChangeCity2 }) {
   const [searchMainCity, setsearchMainCity] = useState(
     localStorage.getItem("city") || "Katowice"
   );
@@ -25,7 +25,9 @@ function MainCity() {
     base: "https://api.weatherapi.com/v1",
     key: "4d3650d6e2784fcb92b151553241706",
   };
-
+  useEffect(() => {
+    setsearchMainCity(changeCity);
+  }, [changeCity]);
   //https://api.weatherapi.com/v1/current.json?key=4d3650d6e2784fcb92b151553241706&q=Kalety
   function searchMainCityWeather() {
     fetch(`${api.base}/current.json?key=${api.key}&q=${searchMainCity}`).then(
@@ -68,6 +70,7 @@ function MainCity() {
     searchSuggestions();
     localStorage.setItem("city", searchMainCity);
     searchMainCityWeather();
+    setChangeCity2(searchMainCity);
   }, [searchMainCity]);
   return (
     <>
